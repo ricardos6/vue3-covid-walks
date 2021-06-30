@@ -1,6 +1,6 @@
 <template>
   <div id="home" className="home">
-    <!-- $emit - Emite un evento que es "capturado" por el componente padre Home-->
+    <!-- Catches the event @click-user emmited by the child component UserList -->
     <UserList :users="friends" @click-user="this.onClickUser" />
     <div className="home__list">
       <Card
