@@ -173,6 +173,7 @@ export default {
     <!-- Catches the event @click-user emmited by the child component UserList -->
     <UserList :users="friends" @click-user="this.onClickUser" /> 
     <div className="home__list">
+    <!-- Catches the event @click-walkr emmited by the child component Card -->
       <Card
         v-for="(item, i) in this.walks"
         :key="i"
@@ -194,4 +195,22 @@ export default {
 <!-- Load the component of the view and styles -->
 <script src="./Home.js"></script>
 <style src="./home.scss" lang="scss"></style>
+```
+
+#### Emit the event by Card.vue
+
+``` vue
+<template>
+  <!-- $emit - Emit an event that is catched by parent component Home-->
+  <div
+    v-bind:class="this.visible ? 'card visible' : 'card'"
+    @click="$emit('click-walk', this.data.id)"
+  >
+    <div class="content">{{ this.data.name }}</div>
+    <!-- ... -->
+  </div>
+</template>
+
+<script src="./Card.js"></script>
+<style src="./card.scss" lang="scss"></style>
 ```
