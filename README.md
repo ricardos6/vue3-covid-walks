@@ -173,7 +173,7 @@ export default {
     <!-- Catches the event @click-user emmited by the child component UserList -->
     <UserList :users="friends" @click-user="this.onClickUser" /> 
     <div className="home__list">
-    <!-- Catches the event @click-walkr emmited by the child component Card -->
+    <!-- Catches the event @click-walk emmited by the child component Card -->
       <Card
         v-for="(item, i) in this.walks"
         :key="i"
@@ -213,4 +213,62 @@ export default {
 
 <script src="./Card.js"></script>
 <style src="./card.scss" lang="scss"></style>
+```
+
+## Router
+
+### index.js
+
+``` javascript
+import { createRouter, createWebHistory } from 'vue-router';
+
+import Home from '../views/home/Home.vue';
+import Login from '../views/login/Login.vue';
+import FriendInfo from '../views/friendInfo/FriendInfo.vue';
+import NewWalk from '../views/newWalk/NewWalk.vue';
+import WalkInfo from '../views/walkInfo/WalkInfo.vue';
+
+const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home
+  },
+  // More routes...
+];
+
+// Checks if the user has role Admin
+function checkAdminRights(to, from, next) {
+  let user = JSON.parse(localStorage.getItem('USER_INFO'));
+  // check if the user is admin
+  if (user.rol == 'admin') {
+    next();
+  } else {
+    return next('/not-allowed');
+  }
+}
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+});
+
+// Redirect to login page if not logged in and trying to access a restricted page
+router.beforeEach((to, from, next) => {
+  const publicPages = ['/login'];
+  const authRequired = !publicPages.includes(to.path);
+  const loggedIn = localStorage.getItem('USER_INFO');
+
+  if (authRequired && !loggedIn) {
+    return next('/login');
+  }
+
+  if (!authRequired && loggedIn) {
+    return next('/');
+  }
+
+  next();
+})
+
+export default router;
 ```
