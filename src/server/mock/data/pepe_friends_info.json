@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "name" : "Pedro",
+        "image" : "https://img.icons8.com/plasticine/2x/user.png",
+        "status" : "online"
+    },
+    {
+        "id" : 2,
+        "name" : "Pablo",
+        "image" : "https://img.icons8.com/plasticine/2x/user.png",
+        "status" : "online"
+    },
+    {
+        "id" : 3,
+        "name" : "Pablo C",
+        "image" : "https://img.icons8.com/plasticine/2x/user.png",
+        "status" : "offline"
+    },
+    {
+        "id" : 4,
+        "name" : "Fernando",
+        "image" : "https://img.icons8.com/plasticine/2x/user.png",
+        "status" : "offline"
+    }
+]

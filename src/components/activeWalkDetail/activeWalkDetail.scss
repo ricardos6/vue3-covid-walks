@@ -1,0 +1,15 @@
+.active_walk {
+  height: 70px;
+  background-color: red;
+}
+.active_walk.header {
+  background-color: green;
+  height: 22px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+.active_walk.info {
+  background-color: aquamarine;
+}

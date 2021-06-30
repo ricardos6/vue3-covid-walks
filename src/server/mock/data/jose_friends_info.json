@@ -1,0 +1,14 @@
+[
+    {
+        "id" : 1,
+        "name" : "Pedro",
+        "image" : "https://img.icons8.com/plasticine/2x/user.png",
+        "status" : "online"
+    },
+    {
+        "id" : 2,
+        "name" : "Pablo",
+        "image" : "https://img.icons8.com/plasticine/2x/user.png",
+        "status" : "online"
+    }
+]

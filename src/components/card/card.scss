@@ -1,0 +1,31 @@
+.card {
+  margin: 8px 8px 0px 8px;
+  margin-top: 100%;
+  transition: 0.5s ease all;
+  width: calc(100% - 16px);
+  opacity: 0;
+  .content {
+    height: 200px;
+    background-color: blue;
+  }
+  .options {
+    display: flex;
+    flex-direction: row;
+    height: 35px;
+  }
+  .options > div {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid black;
+    &:first-child {
+      border-left: 0;
+    }
+  }
+}
+
+.card.visible {
+  margin-top: 8px;
+  opacity: 1;
+}

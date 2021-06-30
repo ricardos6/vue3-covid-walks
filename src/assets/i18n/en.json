@@ -1,0 +1,21 @@
+{
+	"etiquetaUsuario" :
+		{
+		"texto" : "User"
+		, "descripcion" : "Specify name user"
+		}
+	, "etiquetaContraseña" :
+		{
+		"texto" : "Contraseña"
+		, "descripcion" : "Specify password user"
+		},
+		"elemento1": {
+			"descripcion": "Element 1"
+		},
+		"elemento2": {
+			"descripcion": "Element 2"
+		},
+		"elemento3": {
+			"descripcion": "Element 3"
+		}
+}

@@ -1,0 +1,12 @@
+.carousel__pagination-button {
+    margin-top: auto;
+    width: 50px;
+    height: 10px;
+    border: 0;
+    cursor: pointer;
+    background-color: rgb(104, 104, 114);
+}
+
+.carousel__pagination-button--active {
+    background-color: rgb(145, 143, 143);
+}

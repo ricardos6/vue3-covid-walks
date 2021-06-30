@@ -1,4 +1,4 @@
-# arquetipo-vue
+# vue3-covid-walks
 
 ## Project setup
 ```
