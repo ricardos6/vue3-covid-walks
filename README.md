@@ -99,9 +99,7 @@ export const HomeModule = {
 Here we combine the modules we created before
 
 ```javascript
-import { createStore } from "vuex";
-import { HomeModule } from "./Home";
-import { LoginModule } from "./Login";
+// Imports...
 
 export default createStore({
   state: {},
@@ -121,11 +119,7 @@ Components that corresponds to the differents pages fo the application, it is co
 ### Home.js
 
 ```javascript
-import UserList from "../../components/userList/UserList.vue";
-import Card from "../../components/card/Card.vue";
-import ActiveWalkDetail from "../../components/activeWalkDetail/ActiveWalkDetail.vue"
-import { useStore } from "vuex";
-import { computed } from "vue";
+// Imports...
 
 export default {
   // Set is executed before the component is created, and just after the props are resolved
@@ -220,13 +214,7 @@ export default {
 ### index.js
 
 ``` javascript
-import { createRouter, createWebHistory } from 'vue-router';
-
-import Home from '../views/home/Home.vue';
-import Login from '../views/login/Login.vue';
-import FriendInfo from '../views/friendInfo/FriendInfo.vue';
-import NewWalk from '../views/newWalk/NewWalk.vue';
-import WalkInfo from '../views/walkInfo/WalkInfo.vue';
+// Imports...
 
 const routes = [
   {
