@@ -260,3 +260,9 @@ router.beforeEach((to, from, next) => {
 
 export default router;
 ```
+
+## License
+
+The MIT License.
+
+See [LICENSE](LICENSE)
